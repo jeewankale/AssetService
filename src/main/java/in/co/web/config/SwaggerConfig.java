@@ -31,11 +31,11 @@ public class SwaggerConfig {
 	}
 
 	private Predicate<RequestHandler> apiPakages() {
-		//return RequestHandlerSelectors.basePackage("com.adopt.controllers");
+		return RequestHandlerSelectors.basePackage("in.co.web.controller");
 		
 		//USE THIS CODE FOR MULTIPLE PACKAGES
-		  return or(RequestHandlerSelectors.basePackage("in.co.web.controller"),
-		  RequestHandlerSelectors.basePackage("in.co.web.controller"));
+		  //return or(RequestHandlerSelectors.basePackage("in.co.web.controller"),
+		  //RequestHandlerSelectors.basePackage("in.co.web.controller"));
 		 
 	}
 	
@@ -47,8 +47,8 @@ public class SwaggerConfig {
 	}
 
 	private ApiInfo apiInfo() {
-		return new ApiInfoBuilder().title("Asset APIs")
-				.description("Asset APIs").build();
+		return new ApiInfoBuilder().title("ITAsset APIs")
+				.description("ITAsset APIs").build();
 	}
 
 }
